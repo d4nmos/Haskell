@@ -1,0 +1,10 @@
+import System.IO
+
+listLast :: [a] -> a
+listLast [x] = x 
+listLast (_:xl) = listLast xl 
+listLast [] = error "List is empty"
+
+main = do
+  putStr $show $ listLast ['x','y','5','z']
+  return()

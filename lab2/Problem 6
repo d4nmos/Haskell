@@ -1,0 +1,6 @@
+isPalindrome [] = True
+isPalindrome (x:t) 
+    | t == [] = (x == last(t)) && isPalindrome(init(t))
+    | otherwise = True
+main = do
+    print(isPalindrome "madamimadam")
